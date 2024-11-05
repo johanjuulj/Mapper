@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div id="signup" class="form">
+            <h1>Sign Up</h1>
+            <input type="text" id="signup-email" placeholder="Email">
+            <input type="text" id="signup-name" placeholder="Name">
+            <select id="signup-role">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+            <input type="password" id="signup-password" placeholder="Password">
+            <input type="password" id="signup-repeat-password" placeholder="Repeat Password">
+            <button onclick="signUp()">Sign Up</button>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+
+        <div id="login" class="form hidden">
+            <h1>Login</h1>
+            <input type="text" id="login-email" placeholder="Email">
+            <input type="password" id="login-password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showSignUp()">Sign Up</a></p>
+        </div>
+
+        <div id="welcome" class="hidden">
+            <h1 id="welcome-message"></h1>
+        </div>
+    </div>
+</body>
+</html>
